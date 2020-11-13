@@ -196,9 +196,6 @@ HTML::SimpleLinkExtor - Extract links from HTML
 
 =head1 DESCRIPTION
 
-THIS IS AN ABANDONED MODULE. THERE IS NO SUPPORT. YOU CAN ADOPT IT
-IF YOU LIKE: https://pause.perl.org/pause/query?ACTION=pause_04about#takeover
-
 This is a simple HTML link extractor designed for the person who does
 not want to deal with the intricacies of C<HTML::Parser> or the
 de-referencing needed to get links out of C<HTML::LinkExtor>.
@@ -570,6 +567,8 @@ This module is in Github
 =head1 AUTHORS
 
 brian d foy, C<< <bdfoy@cpan.org> >>
+
+Maintained by Nigel Horne, C<< <njh at bandsman.co.uk> >>
 
 =head1 COPYRIGHT AND LICENSE
 
