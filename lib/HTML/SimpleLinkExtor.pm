@@ -13,7 +13,7 @@ use HTML::LinkExtor;
 use LWP::UserAgent;
 use URI;
 
-our $VERSION = '1.272';
+our $VERSION = '1.273';
 
 use parent qw(HTML::LinkExtor);
 
@@ -45,7 +45,7 @@ sub AUTOLOAD {
 	unless( exists $AUTO_METHODS{$method} ) {
 		carp __PACKAGE__ . ": method $method unknown";
 		return;
-		}
+	}
 
 	$self->_extract( $method );
 	}

@@ -142,7 +142,7 @@ sub do_it {
 	eval "require $minimum_perl;" or die $@;
 
 	WriteMakefile( %$arguments );
-	}
+}
 
 
 no warnings;
