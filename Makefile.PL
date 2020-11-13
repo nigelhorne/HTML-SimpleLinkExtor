@@ -50,7 +50,7 @@ use File::Spec::Functions qw(catfile);
 my $module    = __PACKAGE__;
 ( my $dist = $module ) =~ s/::/-/g;
 
-my $github    = 'https://github.com/CPAN-Adoptable-Modules/html-simplelinkextor';
+my $github    = 'https://github.com/nigelhorne/HTML-SimpleLinkExtor';
 my $main_file = catfile( 'lib', split /::/, "$module.pm" );
 
 my %WriteMakefile = (
@@ -101,6 +101,24 @@ my %WriteMakefile = (
 			homepage => $github,
 			},
 		},
+	META_MERGE		=> {
+		'meta-spec' => { version => 2 },
+		resources => {
+			repository => {
+				type => 'git',
+				url => 'git://github.com/nigelhorne/HTML-SimpleLinkExtor.git',
+				web => 'https://github.com/nigelhorne/HTML-SimpleLinkExtor',
+				repository => 'https://github.com/nigelhorne/HTML-SimpleLinkExtor',
+			},
+			bugtracker => {
+				# web => 'https://rt.cpan.org/Public/Dist/Display.html?Name=HTML-SimpleLinkExtor',
+				# mailto => 'bug-HTML-SimpleLinkExtor@rt.cpan.org'
+				web => 'https://github.com/nigelhorne/HTML-SimpleLinkExtor/issues',
+				url => 'https://github.com/nigelhorne/HTML-SimpleLinkExtor/issues',
+			}
+
+		},
+	},
 
 	clean => { FILES => "$dist-*" },
 	);

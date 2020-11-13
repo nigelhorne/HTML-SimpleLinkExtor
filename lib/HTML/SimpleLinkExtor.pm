@@ -558,12 +558,6 @@ can edit C<%AUTO_METHODS> in the source.
 Will Crain who identified a problem with IMG links that had
 a USEMAP attribute.
 
-=head1 SOURCE AVAILABILITY
-
-This module is in Github
-
-	https://github.com:CPAN-Adoptable-Modules/html-simplelinkextor.git
-
 =head1 AUTHORS
 
 brian d foy, C<< <bdfoy@cpan.org> >>
