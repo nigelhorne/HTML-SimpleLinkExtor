@@ -79,7 +79,7 @@ my %WriteMakefile = (
 
 	'PREREQ_PM'     => {
 		'AutoLoader'	=> 0,
-		'CARP'		=> 0,
+		'Carp'		=> 0,
 		'HTML::LinkExtor' => '1.28',
 		'LWP::UserAgent'  => '0',
 		'URI'             => '1.09',
