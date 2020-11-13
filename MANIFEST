@@ -6,6 +6,7 @@ LICENSE
 Makefile.PL
 MANIFEST			This list of files
 MANIFEST.SKIP
+README.md
 README.pod
 scripts/linktractor
 t/absolute_links.t
@@ -13,6 +14,8 @@ t/autoload.t
 t/compile.t
 t/example.html
 t/example2.html
+t/links.t
+t/no404s.t
 t/parse.t
 t/pod-cm.t
 t/pod.t
