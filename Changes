@@ -1,5 +1,8 @@
 Revision history for Perl module HTML::SimpleLinkExtor
 
+1.28
+	Test::HTTPStatus is no longer unsupported
+
 1.273	Fri Nov 13 18:29:10 EST 2020
 	No changes to the code, new maintainer - thanks to BDFOY
 

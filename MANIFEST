@@ -25,4 +25,5 @@ t/rt87288.t
 t/schemes.t
 t/tags.t
 t/test_manifest
+t/vars.t
 xt/changes.t
