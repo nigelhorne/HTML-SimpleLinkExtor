@@ -109,13 +109,12 @@ my %WriteMakefile = (
 				url => 'git://github.com/nigelhorne/HTML-SimpleLinkExtor.git',
 				web => 'https://github.com/nigelhorne/HTML-SimpleLinkExtor',
 				repository => 'https://github.com/nigelhorne/HTML-SimpleLinkExtor',
-			},
-			bugtracker => {
+			}, bugtracker => {
 				# web => 'https://rt.cpan.org/Public/Dist/Display.html?Name=HTML-SimpleLinkExtor',
 				# mailto => 'bug-HTML-SimpleLinkExtor@rt.cpan.org'
 				web => 'https://github.com/nigelhorne/HTML-SimpleLinkExtor/issues',
 				url => 'https://github.com/nigelhorne/HTML-SimpleLinkExtor/issues',
-			}
+			}, homepage => $github,
 
 		},
 	},
