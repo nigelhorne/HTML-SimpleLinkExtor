@@ -165,10 +165,13 @@ HTML::SimpleLinkExtor - Extract links from HTML
 	use HTML::SimpleLinkExtor;
 
 	my $extor = HTML::SimpleLinkExtor->new();
+	my $filename = '/var/www/index.html';
 	$extor->parse_file($filename);
 	#--or--
+	my $html = '<A HREF="https://www.nigelhorne.com">Home</A>';
 	$extor->parse($html);
 
+	my $other_file = '/var/www/home.html';
 	$extor->parse_file($other_file); # get more links
 
 	$extor->clear_links; # reset the link list

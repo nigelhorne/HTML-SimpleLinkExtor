@@ -23,6 +23,7 @@ t/pod_coverage.t
 t/relative_links.t
 t/rt87288.t
 t/schemes.t
+t/snippets.t
 t/tags.t
 t/test_manifest
 t/vars.t
