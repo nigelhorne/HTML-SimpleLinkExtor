@@ -12,6 +12,8 @@ scripts/linktractor
 t/absolute_links.t
 t/autoload.t
 t/compile.t
+t/eof.t
+t/eol.t
 t/example.html
 t/example2.html
 t/links.t
