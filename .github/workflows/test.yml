@@ -1,3 +1,7 @@
+---
+# See https://github.com/actions/virtual-environments
+
+name: Test Code
 on:
   push:
     branches:
@@ -9,9 +13,16 @@ jobs:
   build:
     runs-on: ${{ matrix.os }}
     strategy:
+      fail-fast: false
       matrix:
-        os: ['windows-latest', 'macos-latest', 'ubuntu-latest']
-        perl: [ '5.30', '5.28' ]
+        os:
+          - macos-11
+          - macos-10.15
+          - ubuntu-20.04
+          - ubuntu-18.04
+          - windows-2022
+          - windows-2019
+        perl: ['5.34', '5.32', '5.30', '5.28']
     name: Perl ${{ matrix.perl }} on ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v1
@@ -25,6 +36,7 @@ jobs:
           cpanm -iq File::Spec ExtUtils::MakeMaker
           cpanm -iqn --skip-satisfied Test::Pod::Spelling::CommonMistakes Test::Portability::Files Test::Pod::Coverage
           cpanm -iq --installdeps --notest .
-          make
       - name: Run Tests
-        run: make test
+        run: prove -l -b t
+        env:
+          AUTHOR_TESTING: 1

@@ -228,7 +228,7 @@ Create the link extractor object.
 =item $extor = HTML::SimpleLinkExtor->new($base)
 
 Create the link extractor object and resolve the relative URLs
-accoridng to the supplied base URL. The supplied base URL overrides
+according to the supplied base URL. The supplied base URL overrides
 any other base URL found in the HTML.
 
 Create the link extractor object and do not resolve relative

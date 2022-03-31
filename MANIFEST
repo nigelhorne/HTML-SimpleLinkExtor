@@ -11,6 +11,7 @@ README.pod
 scripts/linktractor
 t/absolute_links.t
 t/autoload.t
+t/comment-spelling.t
 t/compile.t
 t/eof.t
 t/eol.t
@@ -20,6 +21,7 @@ t/links.t
 t/no404s.t
 t/parse.t
 t/pod-cm.t
+t/pod-spelling.t
 t/pod.t
 t/pod_coverage.t
 t/relative_links.t
