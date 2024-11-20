@@ -240,15 +240,16 @@ sub new {
 	my $class = shift;
 	my $base  = shift;
 
-	my $self = new HTML::LinkExtor;
+	my $self = HTML::LinkExtor->new();
 	bless $self, $class;
 
 	$self->{'_SimpleLinkExtor_base'} = $base;
-	$self->{'_ua'} = LWP::UserAgent->new;
-	$self->_init_links;
+	$self->{'_ua'} = LWP::UserAgent->new();
+	$self->_init_links();
 
+	# Return the blessed object
 	return $self;
-	}
+}
 
 =item HTML::SimpleLinkExtor->ua;
 
