@@ -21,13 +21,13 @@ t/links.t
 t/no404s.t
 t/parse.t
 t/pod-cm.t
+t/pod-snippets.t
 t/pod-spelling.t
 t/pod.t
 t/pod_coverage.t
 t/relative_links.t
 t/rt87288.t
 t/schemes.t
-t/snippets.t
 t/tags.t
 t/test_manifest
 t/vars.t

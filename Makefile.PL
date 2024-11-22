@@ -43,6 +43,15 @@ my $module    = __PACKAGE__;
 my $github    = 'https://github.com/nigelhorne/HTML-SimpleLinkExtor';
 my $main_file = catfile( 'lib', split /::/, "$module.pm" );
 
+my $distopts = {
+	COMPRESS => 'gzip -9f',
+	SUFFIX => 'gz'
+};
+
+if($^O eq 'darwin') {
+	$distopts->{'TAR'} = 'gtar';
+}
+
 my %WriteMakefile = (
 	'MIN_PERL_VERSION' => '5.008',
 
@@ -68,6 +77,7 @@ my %WriteMakefile = (
 
 	'PREREQ_PM'     => {
 		'AutoLoader'	=> 0,
+		'AutoSplit'	=> 0,
 		'Carp'		=> 0,
 		'HTML::LinkExtor' => '1.28',
 		'LWP::UserAgent'  => '0',
@@ -108,7 +118,8 @@ my %WriteMakefile = (
 	},
 
 	clean => { FILES => "$dist-*" },
-	);
+	dist => $distopts,
+);
 
 sub arguments { \%WriteMakefile }
 
