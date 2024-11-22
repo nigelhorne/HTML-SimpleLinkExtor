@@ -1,5 +1,6 @@
 ---
 # See https://github.com/actions/virtual-environments
+# https://github.com/marketplace/actions/setup-perl-environment
 
 name: Test Code
 on:
@@ -16,13 +17,10 @@ jobs:
       fail-fast: false
       matrix:
         os:
-          - macos-11
-          - macos-10.15
-          - ubuntu-20.04
-          - ubuntu-18.04
-          - windows-2022
-          - windows-2019
-        perl: ['5.34', '5.32', '5.30', '5.28']
+          - macos-latest
+          - ubuntu-latest
+          - windows-latest
+        perl: ['5.40', '5.38', '5.36', '5.34', '5.32', '5.30', '5.28', '5.22']
     name: Perl ${{ matrix.perl }} on ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v1
@@ -34,9 +32,19 @@ jobs:
       - name: Install Dependencies
         run: |
           cpanm -iq File::Spec ExtUtils::MakeMaker
-          cpanm -iqn --skip-satisfied Test::Pod::Spelling::CommonMistakes Test::Portability::Files Test::Pod::Coverage
+          cpanm -iqn --skip-satisfied Test::Pod::Spelling::CommonMistakes Test::Portability::Files Test::Pod::Coverage AutoLoader
           cpanm -iq --installdeps --notest .
       - name: Run Tests
-        run: prove -l -b t
         env:
           AUTHOR_TESTING: 1
+          AUTOMATED_TESTING: 1
+          NO_NETWORK_TESTING: 1
+          NONINTERACTIVE_TESTING: 1
+          # CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+        run: prove -l -b t
+        # run: |
+        #   cover -test
+        #   cover -report codecov
+        #   curl -Os https://uploader.codecov.io/latest/macos/codecov
+        #   chmod +x codecov
+        #   ./codecov -t ${{ secrets.CODECOV_TOKEN }}
