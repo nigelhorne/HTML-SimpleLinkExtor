@@ -70,6 +70,7 @@ my %WriteMakefile = (
 
 	'BUILD_REQUIRES' => {
 	}, 'TEST_REQUIRES' => {
+		'Test::DescribeMe' => 0,
 		'Test::Most'   => 0,
 		'Test::Needs' => 0,
 		'Test::Output' => 0,
