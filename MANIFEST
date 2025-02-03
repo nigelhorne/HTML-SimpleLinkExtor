@@ -9,6 +9,7 @@ MANIFEST.SKIP
 README.md
 README.pod
 scripts/linktractor
+t/30-basics.t
 t/absolute_links.t
 t/autoload.t
 t/comment-spelling.t

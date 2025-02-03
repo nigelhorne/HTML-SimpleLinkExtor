@@ -1,7 +1,6 @@
 package HTML::SimpleLinkExtor;
 use strict;
 
-use warnings;
 no warnings;
 
 use subs qw();
@@ -529,9 +528,11 @@ sub absolute_links {
 Returns the relatives URLs (which might exclude those converted to
 absolute URLs by specifying a base or having a base in the document).
 
-In list context it returns the links. In scalar context it returns
+In a list context,
+it returns the links.
+In a scalar contex,
+it returns
 the count of the matching links.
-
 
 =cut
 
@@ -553,8 +554,8 @@ sub relative_links {
 
 =head1 TO DO
 
-This module doesn't handle all of the HTML tags that might
-have links.  If someone wants those, I'll add them, or you
+This module doesn't handle all HTML tags that might have links.
+If someone wants those, I'll add them, or you
 can edit C<%AUTO_METHODS> in the source.
 
 =head1 CREDITS
